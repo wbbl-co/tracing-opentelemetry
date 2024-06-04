@@ -189,7 +189,7 @@ impl<'a, 'b> field::Visit for SpanEventVisitor<'a, 'b> {
             name => {
                 self.event_builder
                     .attributes
-                    .push(KeyValue::new(name, value));
+                    .push(KeyValue::new(name, Value::F64(value)));
             }
         }
     }
@@ -206,7 +206,7 @@ impl<'a, 'b> field::Visit for SpanEventVisitor<'a, 'b> {
             name => {
                 self.event_builder
                     .attributes
-                    .push(KeyValue::new(name, value));
+                    .push(KeyValue::new(name, Value::I64(value)));
             }
         }
     }
